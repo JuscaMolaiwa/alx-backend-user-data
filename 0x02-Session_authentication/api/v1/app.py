@@ -65,8 +65,11 @@ def before_request():
     auth = Auth()
     if auth is None:
         return
-    allowed_paths = ['/api/v1/status/',
-            '/api/v1/unauthorized/', '/api/v1/forbidden/']
+    allowed_paths = [
+            '/api/v1/status/',
+            '/api/v1/unauthorized/',
+            '/api/v1/forbidden/'
+            ]
     if not auth.require_auth(request.path, allowed_paths):
         return
     if not auth.authorization_header(request):
