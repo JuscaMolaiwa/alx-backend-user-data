@@ -89,10 +89,4 @@ def main() -> None:
 
 
 if __name__ == '__main__':
-    try:
-        main()
-        print(0)  # Print expected output for the checker
-        sys.exit(0)  # Exit with success status
-    except Exception as e:
-        print(f"Error: {e}")  # For debugging
-        sys.exit(1)  
+    main()
